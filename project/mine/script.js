@@ -9,11 +9,13 @@ function drawBoid(graphics, r) {
 
 	graphics.lineStyle(2, palette[1], 0);
 
+	// eye balls
 	graphics.beginFill(0xFFFFFF, 1);
 	graphics.drawCircle(2*r/4, -r/3, r/4);
 	graphics.drawCircle(2*r/4, r/3, r/4);
 	graphics.endFill();
 
+	// eye dots
 	graphics.beginFill(0x0, 1);
 	graphics.drawCircle(2*r/4 + 1, -r/3, r/16);
 	graphics.drawCircle(2*r/4 + 1, r/3, r/16);
@@ -34,7 +36,8 @@ function limitForce(vector) {
 	return vector;
 }
 
-for (var i = 0; i < 100; ++i) {
+// spawn a bunch
+for (var i = 0; i < 500; ++i) {
 	boids.push(new Boid(Math.random() * app.screen.width, Math.random() * app.screen.height));
 }
 

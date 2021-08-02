@@ -22,12 +22,14 @@ function drawBoid(graphics, r) {
 	graphics.endFill();
 }
 
-/*
-Boid.prototype.decision = function (environment) {
-	this.flock(environment.boids);
-};
-*/
-
+/** 
+ * A filter for boids that aren't close enough.
+ **/
+function withinRangeOf(boid) {	
+	return function(other) {
+		return boid.position.distance(other.position) <= getBoidViewDistance();
+	};
+}
 /**
  * Limit the vector to a certain length.
  */

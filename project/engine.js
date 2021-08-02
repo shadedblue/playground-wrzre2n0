@@ -93,7 +93,7 @@ function angleBetween(a, b) {
 }
 
 function Boid(x, y) {
-	this.radius = 10;
+	this.radius = 7 + 6 * Math.random();
 	this.graphics = createBoidGraphics(this.radius);
 	this.position = new Victor(x, y);
 	this.velocity = new Victor(0, 0);

@@ -87,7 +87,8 @@ Boid.prototype.separation = function (boids) {
 	for (var i = 0, l = boids.length; i < l; ++i) {
 		var other = boids[i];
 		var dist = this.position.distance(other.position);
-		if (dist < desiredSeparation && dist > 0) {
+		
+		if (dist < (desiredSeparation * this.strength) && dist > 0) {
 			// Calculate vector pointing away from the flockmate, weighted by distance
 			var diff = this.position.clone().subtract(other.position).normalize().divideScalar(dist);
 			desired.add(diff);

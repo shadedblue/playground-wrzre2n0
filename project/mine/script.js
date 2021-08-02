@@ -22,9 +22,11 @@ function drawBoid(graphics, r) {
 	graphics.endFill();
 }
 
+/*
 Boid.prototype.decision = function (environment) {
 	this.flock(environment.boids);
 };
+*/
 
 /**
  * Limit the vector to a certain length.
@@ -37,7 +39,7 @@ function limitForce(vector) {
 }
 
 // spawn a bunch
-for (var i = 0; i < 500; ++i) {
+for (var i = 0; i < 50; ++i) {
 	boids.push(new Boid(Math.random() * app.screen.width, Math.random() * app.screen.height));
 }
 

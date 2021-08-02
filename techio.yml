@@ -12,6 +12,8 @@ plan:
     statement: markdowns/2.3-environment.md
   - title: Going further
     statement: markdowns/3.1-future.md
+  - title: Mine
+  	statement: Here's my first attempt
 
 projects:
   flocks:
